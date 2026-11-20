@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textos en español (idioma por defecto). Los generó la migración a recursos. -->
+    <string name="syl_1_item_to_review">1 elemento por revisar</string>
+    <string name="syl_add_module_by_hand">Agregar módulo a mano</string>
+    <string name="syl_add_subtopic">Agregar subtema</string>
+    <string name="syl_analyzing_program_pdf_with_ai">Analizando programa PDF con IA...</string>
+    <string name="syl_can_t_publish_yet">No se puede publicar todavía</string>
+    <string name="syl_cancel">Cancelar</string>
+    <string name="syl_couldn_t_read_the_file_or_it_s_larger_">No se pudo leer el archivo, o pesa más de 10 MB. Elige el PDF del programa del curso</string>
+    <string name="syl_course_syllabus">Temario del curso</string>
+    <string name="syl_create_a_course_from_the_courses_tab_s">Crea un curso desde la pestaña Cursos para poder cargar su temario.</string>
+    <string name="syl_delete_module">Eliminar el módulo %1$s</string>
+    <string name="syl_delete_subtopic">Eliminar el subtema %1$s</string>
+    <string name="syl_draft">Borrador</string>
+    <string name="syl_extract_syllabus_from_pdf_with_ai">Extraer temario desde PDF con IA</string>
+    <string name="syl_file_checked_it_s_a_valid_pdf">Archivo revisado: es un PDF válido</string>
+    <string name="syl_generating_a_proposal_of_modules_subto">Generando propuesta de módulos, subtemas y objetivos...</string>
+    <string name="syl_items_to_review">%1$s elementos por revisar</string>
+    <string name="syl_looks_good_confirm">Está bien, confirmar</string>
+    <string name="syl_module">Módulo %1$s</string>
+    <string name="syl_module_2">el módulo %1$s</string>
+    <string name="syl_module_title">Título del módulo</string>
+    <string name="syl_move_down">Bajar %1$s</string>
+    <string name="syl_move_up">Subir %1$s</string>
+    <string name="syl_no_objectives_notes_can_t_be_audited_a">Sin objetivos: no se podrá auditar los apuntes contra este subtema</string>
+    <string name="syl_objectives_one_per_line">Objetivos, uno por línea</string>
+    <string name="syl_program_pdf_uploaded">Programa PDF subido • %1$s</string>
+    <string name="syl_publish_anyway">Publicar de todos modos</string>
+    <string name="syl_publish_to_course">Publicar al curso</string>
+    <string name="syl_published">Publicado</string>
+    <string name="syl_retry_with_the_same_pdf">Reintentar con el mismo PDF</string>
+    <string name="syl_save_draft">Guardar borrador</string>
+    <string name="syl_saving">Guardando…</string>
+    <string name="syl_saving_the_result_as_a_draft">Guardando el resultado como borrador</string>
+    <string name="syl_students_only_see_the_syllabus_after_y">Los estudiantes solo ven el temario después de publicarlo.</string>
+    <string name="syl_subtopic">el subtema %1$s</string>
+    <string name="syl_subtopic_title">Título del subtema</string>
+    <string name="syl_syllabus_published_it_s_now_visible_to">Temario publicado. Ya es visible para tus estudiantes.</string>
+    <string name="syl_the_ai_was_unsure_about_this_module_co">La IA dudó de este módulo (confianza %1$s%%)</string>
+    <string name="syl_the_ai_was_unsure_about_this_subtopic_">La IA dudó de este subtema (confianza %1$s%%)</string>
+    <string name="syl_the_module_title_is_missing">Falta el título del módulo</string>
+    <string name="syl_the_subtopic_title_is_missing">Falta el título del subtema</string>
+    <string name="syl_they_re_marked_in_amber_the_ai_was_uns">Están marcados en ámbar: la IA dudó de ellos o les falta algo. Corrígelos o confírmalos antes de publicar.</string>
+    <string name="syl_this_course_already_has_a_syllabus">Este curso ya tiene un temario</string>
+    <string name="syl_this_course_has_no_syllabus_yet">Este curso todavía no tiene temario</string>
+    <string name="syl_this_module_has_no_subtopics">Este módulo no tiene subtemas</string>
+    <string name="syl_to_review">Por revisar</string>
+    <string name="syl_upload_program_pdf">Subir programa PDF</string>
+    <string name="syl_upload_the_course_program_as_a_pdf_abo">Sube el programa del curso en PDF arriba para que la IA genere los módulos, o agrega el primero a mano.</string>
+    <string name="syl_upload_the_course_program_as_a_pdf_the">Sube el programa del curso en PDF. La IA propondrá los módulos, subtemas y objetivos para que los revises.</string>
+    <string name="syl_uploaded">Subido</string>
+    <string name="syl_uploading_and_analyzing_the_syllabus_w">Subiendo y analizando el temario con la IA</string>
+    <string name="syl_warnings">Avisos</string>
+    <string name="syl_you_don_t_have_any_courses_yet">Todavía no tienes cursos</string>
+    <string name="syl_overwrite_warning">Publicar lo actualizará: se agregan y cambian los subtemas de tu borrador y se quitan los que borraste (si ya tienen apuntes de estudiantes, el servidor no los deja quitar). Los estudiantes verán el resultado.</string>
+</resources>

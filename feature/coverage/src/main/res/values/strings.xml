@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textos en español (idioma por defecto). Los generó la migración a recursos. -->
+    <string name="cov_aggregated_and_anonymous_never_shown_p">Agregada y anónima: nunca se muestra por estudiante.</string>
+    <string name="cov_coverage_map">Mapa de cobertura</string>
+    <string name="cov_covered">Cubierto</string>
+    <string name="cov_covered_2">%1$s%% cubierto</string>
+    <string name="cov_covered_and_reinforced_with_more_than_">Cubierto y además reforzado con más de un apunte o repaso.</string>
+    <string name="cov_covered_on_average_students">cubierto en promedio · %1$s estudiantes</string>
+    <string name="cov_create_a_course_in_the_courses_tab_to_">Crea un curso en la pestaña Cursos para ver la cobertura de sus estudiantes.</string>
+    <string name="cov_every_subtopic_of_the_course_with_its_">Cada subtema del curso, con su estado según tus apuntes.</string>
+    <string name="cov_g">%1$s · G%2$s</string>
+    <string name="cov_got_it">Entendido</string>
+    <string name="cov_group_coverage">Cobertura del grupo</string>
+    <string name="cov_loading_coverage_map">Cargando mapa de cobertura</string>
+    <string name="cov_module">Módulo %1$s · %2$s</string>
+    <string name="cov_no_groups_yet">Todavía no hay grupos</string>
+    <string name="cov_no_notes">Sin apuntes</string>
+    <string name="cov_no_syllabus_published_yet">Todavía no hay temario publicado</string>
+    <string name="cov_once_the_course_has_subtopics_you_ll_s">Cuando el curso tenga subtemas, aquí verás cuánto los cubre el grupo.</string>
+    <string name="cov_overall_coverage">cobertura global</string>
+    <string name="cov_partial">Parcial</string>
+    <string name="cov_partial_2">%1$s%% parcial</string>
+    <string name="cov_reinforced">Reforzado</string>
+    <string name="cov_retry">Reintentar</string>
+    <string name="cov_the_syllabus_is_empty">El temario está vacío</string>
+    <string name="cov_what_does_each_coverage_status_mean">¿Qué significa cada estado de cobertura?</string>
+    <string name="cov_what_does_each_status_mean">¿Qué significa cada estado?</string>
+    <string name="cov_you_don_t_have_any_notes_covering_this">No tienes ningún apunte que cubra este subtema todavía.</string>
+    <string name="cov_you_have_notes_but_they_don_t_cover_th">Tienes apuntes, pero no cubren todo el contenido del subtema.</string>
+    <string name="cov_your_notes_fully_cover_this_subtopic">Tus apuntes cubren completo este subtema.</string>
+    <string name="cov_your_teacher_hasn_t_published_this_cou">Tu profesor no ha publicado el temario de este curso todavía.</string>
+    <string name="cov_back">Volver</string>
+</resources>

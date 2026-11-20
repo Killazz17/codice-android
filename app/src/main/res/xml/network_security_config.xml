@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Release: solo HTTPS. Ningún dominio acepta tráfico sin cifrar. El permiso para hablar HTTP con el backend local
+    (10.0.2.2 y localhost) vive en app/src/debug/res/xml/network_security_config.xml y solo existe en las builds de debug.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

@@ -1,0 +1,33 @@
+<resources>
+    <!--
+        Tema XML del sistema, no de Compose.
+
+        Solo se usa durante el arranque, antes de que Compose tome el control:
+        es lo que Android pinta en el instante entre tocar el icono y que
+        MainActivity dibuje. Los colores y tipografias reales de la app los
+        define CodiceTheme en Kotlin (ui/theme/Theme.kt).
+
+        NoActionBar es obligatorio: con Compose, la barra superior es un
+        composable (TopAppBar); si el sistema dibujara ademas la suya, saldrian
+        dos barras.
+
+        Nota: antes heredaba de Theme.MaterialComponents, que venia de la
+        libreria "material" de Views. Al pasar el proyecto a Compose esa
+        dependencia se quito, asi que ahora hereda de un tema del propio
+        Android, sin dependencias externas.
+    -->
+    <style name="Theme.SierraAppMobile" parent="android:Theme.Material.Light.NoActionBar">
+        <!--
+            El tema "Light" del sistema fuerza iconos OSCUROS en la barra de
+            estado por defecto (pensados para un fondo claro). AuthScreen
+            (la unica pantalla que existe hoy) siempre tiene fondo oscuro
+            (AuthColors.Canvas), asi que con el valor por defecto los iconos
+            del reloj y la bateria quedarian casi invisibles - eso paso en la
+            primera prueba en el emulador. Se fuerzan a claros aqui mismo, en
+            vez de solo en tiempo de ejecucion (enableEdgeToEdge en
+            MainActivity.kt), porque el tema XML gana esa pulseada.
+        -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

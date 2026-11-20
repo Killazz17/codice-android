@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- English texts. -->
+    <string name="syl_1_item_to_review">1 item to review</string>
+    <string name="syl_add_module_by_hand">Add module by hand</string>
+    <string name="syl_add_subtopic">Add subtopic</string>
+    <string name="syl_analyzing_program_pdf_with_ai">Analyzing program PDF with AI...</string>
+    <string name="syl_can_t_publish_yet">Can\'t publish yet</string>
+    <string name="syl_cancel">Cancel</string>
+    <string name="syl_couldn_t_read_the_file_or_it_s_larger_">Couldn\'t read the file, or it\'s larger than 10 MB. Choose the course program PDF</string>
+    <string name="syl_course_syllabus">Course syllabus</string>
+    <string name="syl_create_a_course_from_the_courses_tab_s">Create a course from the Courses tab so you can load its syllabus.</string>
+    <string name="syl_delete_module">Delete module %1$s</string>
+    <string name="syl_delete_subtopic">Delete subtopic %1$s</string>
+    <string name="syl_draft">Draft</string>
+    <string name="syl_extract_syllabus_from_pdf_with_ai">Extract syllabus from PDF with AI</string>
+    <string name="syl_file_checked_it_s_a_valid_pdf">File checked: it\'s a valid PDF</string>
+    <string name="syl_generating_a_proposal_of_modules_subto">Generating a proposal of modules, subtopics and objectives...</string>
+    <string name="syl_items_to_review">%1$s items to review</string>
+    <string name="syl_looks_good_confirm">Looks good, confirm</string>
+    <string name="syl_module">Module %1$s</string>
+    <string name="syl_module_2">module %1$s</string>
+    <string name="syl_module_title">Module title</string>
+    <string name="syl_move_down">Move %1$s down</string>
+    <string name="syl_move_up">Move %1$s up</string>
+    <string name="syl_no_objectives_notes_can_t_be_audited_a">No objectives: notes can\'t be audited against this subtopic</string>
+    <string name="syl_objectives_one_per_line">Objectives, one per line</string>
+    <string name="syl_program_pdf_uploaded">Program PDF uploaded • %1$s</string>
+    <string name="syl_publish_anyway">Publish anyway</string>
+    <string name="syl_publish_to_course">Publish to course</string>
+    <string name="syl_published">Published</string>
+    <string name="syl_retry_with_the_same_pdf">Retry with the same PDF</string>
+    <string name="syl_save_draft">Save draft</string>
+    <string name="syl_saving">Saving…</string>
+    <string name="syl_saving_the_result_as_a_draft">Saving the result as a draft</string>
+    <string name="syl_students_only_see_the_syllabus_after_y">Students only see the syllabus after you publish it.</string>
+    <string name="syl_subtopic">subtopic %1$s</string>
+    <string name="syl_subtopic_title">Subtopic title</string>
+    <string name="syl_syllabus_published_it_s_now_visible_to">Syllabus published. It\'s now visible to your students.</string>
+    <string name="syl_the_ai_was_unsure_about_this_module_co">The AI was unsure about this module (confidence %1$s%%)</string>
+    <string name="syl_the_ai_was_unsure_about_this_subtopic_">The AI was unsure about this subtopic (confidence %1$s%%)</string>
+    <string name="syl_the_module_title_is_missing">The module title is missing</string>
+    <string name="syl_the_subtopic_title_is_missing">The subtopic title is missing</string>
+    <string name="syl_they_re_marked_in_amber_the_ai_was_uns">They\'re marked in amber: the AI was unsure about them or something is missing. Fix or confirm them before publishing.</string>
+    <string name="syl_this_course_already_has_a_syllabus">This course already has a syllabus</string>
+    <string name="syl_this_course_has_no_syllabus_yet">This course has no syllabus yet</string>
+    <string name="syl_this_module_has_no_subtopics">This module has no subtopics</string>
+    <string name="syl_to_review">To review</string>
+    <string name="syl_upload_program_pdf">Upload program PDF</string>
+    <string name="syl_upload_the_course_program_as_a_pdf_abo">Upload the course program as a PDF above so the AI generates the modules, or add the first one by hand.</string>
+    <string name="syl_upload_the_course_program_as_a_pdf_the">Upload the course program as a PDF. The AI will propose the modules, subtopics and objectives for you to review.</string>
+    <string name="syl_uploaded">Uploaded</string>
+    <string name="syl_uploading_and_analyzing_the_syllabus_w">Uploading and analyzing the syllabus with AI</string>
+    <string name="syl_warnings">Warnings</string>
+    <string name="syl_you_don_t_have_any_courses_yet">You don\'t have any courses yet</string>
+    <string name="syl_overwrite_warning">Publishing will update it: the subtopics in your draft are added and changed, and the ones you deleted are removed (if they already have student notes, the server won\'t let you remove them). Students will see the result.</string>
+</resources>

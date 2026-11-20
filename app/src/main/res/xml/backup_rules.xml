@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Nada de la app se respalda: la sesión (JWT) y la caché de apuntes, matrículas y cobertura son datos de la persona y
+   se pueden volver a pedir al servidor. Con android:allowBackup="false" esto ya no aplica, pero se deja explícito por si
+   alguien lo vuelve a activar. Se ignora en dispositivos con API 31 o más: ahí manda data_extraction_rules.xml.
+-->
+<full-backup-content>
+    <exclude domain="root" path="." />
+    <exclude domain="file" path="." />
+    <exclude domain="database" path="." />
+    <exclude domain="sharedpref" path="." />
+</full-backup-content>

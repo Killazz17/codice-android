@@ -1,0 +1,140 @@
+# Catalogo de versiones centralizado.
+#
+# Por que existe: en vez de escribir "androidx.core:core-ktx:1.19.0" en cada
+# build.gradle.kts, se declara una vez aqui y los modulos la referencian como
+# libs.androidx.core.ktx. Si mañana hay que subir una version, se cambia en un
+# solo lugar y todos los modulos quedan sincronizados.
+#
+# Regla de nombres: los guiones del alias se vuelven puntos al usarlo.
+# "androidx-core-ktx" aqui  ->  libs.androidx.core.ktx en el build.gradle.kts
+
+[versions]
+# --- Herramientas de compilacion ---
+agp = "9.3.2"                    # Android Gradle Plugin
+kotlin = "2.4.10"
+ksp = "2.3.11"                    # Procesador de anotaciones; lo usa Hilt. Debe ir alineado con la version de Kotlin.
+
+# --- AndroidX base ---
+coreKtx = "1.19.0"
+lifecycleRuntimeKtx = "2.10.0"
+activityCompose = "1.13.0"
+fragment = "1.8.6"               # Lo necesita BiometricPrompt (pide una FragmentActivity); se fija para que vaya alineada con activity.
+biometric = "1.1.0"              # Huella o bloqueo del teléfono para desbloquear la app.
+# hiltNavigationCompose: version conocida y estable al momento de escribir esto.
+# Verificar si Android Studio sugiere una mas reciente antes de dar por sentado
+# que sigue siendo la ultima - el resto del catalogo usa versiones muy nuevas.
+hiltNavigationCompose = "1.2.0"
+
+# --- Compose ---
+# El BOM (Bill of Materials) fija de golpe las versiones compatibles de todas
+# las librerias de Compose, para no tener que versionarlas una por una.
+composeBom = "2026.05.01"
+navigationCompose = "2.9.8"
+
+# --- Camera ---
+cameraX = "1.6.1"
+barcodeScanning = "17.3.0"
+zxing = "3.5.3"
+
+# --- Inyeccion de dependencias ---
+hilt = "2.60.1"
+
+# --- Almacenamiento local ---
+datastore = "1.2.1"              # Preferencias (sesion del usuario). Reemplaza a SharedPreferences.
+
+# --- Red (se usaran en :core:data, issue #4 en adelante) ---
+retrofit = "3.0.0"
+okhttp = "5.3.2"
+# kotlinxSerialization: el plugin de serializacion va pegado a la version de
+# Kotlin (mismo tren de release); la libreria kotlinx-serialization-json es un
+# artefacto aparte con su propio versionado.
+kotlinxSerializationJson = "1.8.0"
+
+# --- Asincronia ---
+kotlinxCoroutines = "1.11.0"
+
+# --- Pruebas ---
+junit = "4.13.2"
+junitVersion = "1.3.0"
+androidxTestRunner = "1.7.0"
+espressoCore = "3.7.0"
+mockk = "1.14.11"
+coreTesting = "2.2.0"
+
+[libraries]
+# --- AndroidX base ---
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+# Misma version que lifecycle-runtime-ktx: se publican en el mismo tren de
+# release, asi que van siempre alineadas.
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
+androidx-biometric = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+
+# --- Compose ---
+# Ojo: las que cuelgan del BOM se declaran SIN version a proposito; la hereda el BOM.
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.7.8" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+
+# --- Camera ---
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraX" }
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraX" }
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraX" }
+barcode-scanning = { group = "com.google.mlkit", name = "barcode-scanning", version.ref = "barcodeScanning" }
+zxing-core = { group = "com.google.zxing", name = "core", version.ref = "zxing" }
+
+# --- Inyeccion de dependencias ---
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+# Grupo distinto (androidx.hilt, no com.google.dagger): es el puente que
+# permite hiltViewModel() dentro de un composable de Navigation Compose.
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+# --- Almacenamiento local ---
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+
+# --- Red ---
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+# El converter de kotlinx.serialization (no Gson): se publica en el mismo tren
+# que Retrofit, por eso comparte version.ref.
+retrofit-converter-kotlinx-serialization = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
+# --- Asincronia ---
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+
+# --- Pruebas ---
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+# El instrumentation runner en sí (androidx.test.runner.AndroidJUnitRunner,
+# apuntado por testInstrumentationRunner en cada build.gradle.kts). Distinto
+# artefacto de androidx-junit: ese solo trae el @RunWith(AndroidJUnit4::class).
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidxTestRunner" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+# Para modulos de biblioteca como :core:data: sin "application", no genera un
+# APK ni pide applicationId, pero si permite consumir AARs (como DataStore).
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+# Genera los (de)serializadores de las clases @Serializable (los DTO de red).
+# Va pegado a la version de Kotlin, no tiene version propia.
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- English texts. -->
+    <string name="ds_loading">Loading</string>
+    <string name="ds_retry">RETRY</string>
+</resources>

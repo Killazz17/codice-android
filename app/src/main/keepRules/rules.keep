@@ -1,0 +1,26 @@
+# Reglas de R8 para la build de release (AGP las junta con las de las librerías).
+# Retrofit, OkHttp, Room, Hilt y kotlinx.serialization traen sus propias reglas en cada AAR; aquí solo va lo de Códice.
+
+# Los atributos que Retrofit y kotlinx.serialization leen por reflexión.
+-keepattributes *Annotation*, InnerClasses, Signature, RuntimeVisibleAnnotations, AnnotationDefault
+
+# DTOs @Serializable de la capa de red: R8 no debe renombrar sus campos ni quitar sus serializadores,
+# o el JSON del backend ya no coincidiría.
+-keep,includedescriptorclasses class una.codice.**$$serializer { *; }
+-keepclassmembers class una.codice.** {
+    *** Companion;
+}
+-keepclasseswithmembers class una.codice.** {
+    kotlinx.serialization.KSerializer serializer(...);
+}
+
+# ML Kit (lector de QR): descubre sus componentes por reflexión y crea cada "registrar" con su constructor vacío. En el
+# modo completo de R8 la regla que trae la librería conserva la clase pero NO ese constructor, así que ML Kit no podía
+# crear el lector y la app se cerraba al abrir el escáner (NullPointerException dentro de BarcodeScanning.getClient()).
+-keep class * implements com.google.firebase.components.ComponentRegistrar {
+    <init>();
+}
+
+# Los stack traces de producción se pueden leer con el mapping.txt de la build.
+-keepattributes SourceFile, LineNumberTable
+-renamesourcefileattribute SourceFile

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textos en español (idioma por defecto). Los generó la migración a recursos. -->
+    <string name="auth_a_few_details_and_you_re_ready_to_phot">Un par de datos y empiezas a fotografiar tus apuntes.</string>
+    <string name="auth_already_have_an_account">"¿Ya tienes cuenta? "</string>
+    <string name="auth_confirm_password">Confirmar contraseña</string>
+    <string name="auth_create_account">Crear cuenta</string>
+    <string name="auth_create_your_account">Crea tu cuenta</string>
+    <string name="auth_don_t_have_an_account">"¿No tienes cuenta? "</string>
+    <string name="auth_full_name">Nombre completo</string>
+    <string name="auth_hide_password">Ocultar contraseña</string>
+    <string name="auth_how_will_you_use_codice">¿Cómo vas a usar Códice?</string>
+    <string name="auth_i_create_and_manage_courses">Creo y administro cursos</string>
+    <string name="auth_i_photograph_my_notes">Fotografío mis apuntes</string>
+    <string name="auth_institutional_email">Correo institucional</string>
+    <string name="auth_password">Contraseña</string>
+    <string name="auth_show_password">Mostrar contraseña</string>
+    <string name="auth_sign_in">Entrar</string>
+    <string name="auth_sign_in_2">Iniciar sesión</string>
+    <string name="auth_sign_up">Regístrate</string>
+    <string name="auth_student">Estudiante</string>
+    <string name="auth_teacher">Profesor</string>
+    <string name="auth_tagline">Fotografía tus apuntes. La IA los reconstruye, los compara con el temario y te dice exactamente qué te falta.</string>
+    <string name="auth_email_example">nombre@una.ac.cr</string>
+    <string name="auth_full_name_example">Ana Rojas Mora</string>
+    <string name="auth_password_hint">Mínimo %1$s caracteres</string>
+</resources>

@@ -1,0 +1,309 @@
+{
+  "uuid": "8f2b8a2e-1c1a-4c1a-9b1a-0a1b2c3d4e5f",
+  "lastMigration": 33,
+  "name": "Codice Mock API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "0.0.0.0",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "a1000000-0000-0000-0000-000000000001",
+      "type": "http",
+      "documentation": "Login: devuelve una sesion si el correo/clave coinciden con una cuenta de ejemplo; 401 en cualquier otro caso.",
+      "method": "post",
+      "endpoint": "api/v1/auth/login",
+      "responseMode": null,
+      "responses": [
+        {
+          "uuid": "a1000000-0000-0000-0000-000000000011",
+          "label": "Login correcto (ana@una.ac.cr)",
+          "statusCode": 200,
+          "latency": 0,
+          "bodyType": "INLINE",
+          "body": "{\n  \"token\": \"fake-token-user-1\",\n  \"userId\": \"user-1\",\n  \"role\": \"STUDENT\"\n}",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "ana@una\\.ac\\.cr",
+              "operator": "regex",
+              "invert": false
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "codice2026",
+              "operator": "equals",
+              "invert": false
+            }
+          ],
+          "rulesOperator": "AND",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a1000000-0000-0000-0000-000000000012",
+          "label": "Login correcto (profe@una.ac.cr)",
+          "statusCode": 200,
+          "latency": 0,
+          "bodyType": "INLINE",
+          "body": "{\n  \"token\": \"fake-token-user-2\",\n  \"userId\": \"user-2\",\n  \"role\": \"TEACHER\"\n}",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "profe@una\\.ac\\.cr",
+              "operator": "regex",
+              "invert": false
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "codice2026",
+              "operator": "equals",
+              "invert": false
+            }
+          ],
+          "rulesOperator": "AND",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a1000000-0000-0000-0000-000000000013",
+          "label": "Credenciales invalidas (default)",
+          "statusCode": 401,
+          "latency": 0,
+          "bodyType": "INLINE",
+          "body": "{\n  \"message\": \"Correo o contraseña incorrectos\"\n}",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a2000000-0000-0000-0000-000000000002",
+      "type": "http",
+      "documentation": "Registro: 409 si el correo ya existe entre las cuentas de ejemplo (ana@una.ac.cr, profe@una.ac.cr); 200 con una sesion nueva en cualquier otro caso.",
+      "method": "post",
+      "endpoint": "auth/register",
+      "responseMode": null,
+      "responses": [
+        {
+          "uuid": "a2000000-0000-0000-0000-000000000021",
+          "label": "Correo repetido",
+          "statusCode": 409,
+          "latency": 0,
+          "bodyType": "INLINE",
+          "body": "{\n  \"message\": \"Ese correo ya está registrado\"\n}",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "^(ana|profe)@una\\.ac\\.cr$",
+              "operator": "regex",
+              "invert": false
+            }
+          ],
+          "rulesOperator": "OR",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a2000000-0000-0000-0000-000000000022",
+          "label": "Registro exitoso (default)",
+          "statusCode": 200,
+          "latency": 400,
+          "bodyType": "INLINE",
+          "body": "{\n  \"token\": \"fake-token-{{faker 'string.uuid'}}\",\n  \"userId\": \"user-{{faker 'string.uuid'}}\",\n  \"role\": \"{{bodyRaw 'role'}}\"\n}",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a3000000-0000-0000-0000-000000000003",
+      "type": "http",
+      "documentation": "Biblioteca: lista de apuntes del estudiante indicado en el query param studentId.",
+      "method": "get",
+      "endpoint": "notes",
+      "responseMode": null,
+      "responses": [
+        {
+          "uuid": "a3000000-0000-0000-0000-000000000031",
+          "label": "Apuntes de ejemplo",
+          "statusCode": 200,
+          "latency": 300,
+          "bodyType": "INLINE",
+          "body": "[\n  {\n    \"id\": \"nota-1\",\n    \"subtopicId\": \"subtema-4-4\",\n    \"moduleId\": \"modulo-4\",\n    \"moduleLabel\": \"M4\",\n    \"subtopicCode\": \"4.4\",\n    \"subtopicTitle\": \"Servicios REST\",\n    \"confirmedText\": \"Un servicio REST expone recursos identificados por URIs y usa los verbos HTTP (GET, POST, PUT, DELETE) para operar sobre ellos.\",\n    \"pageCount\": 2,\n    \"syncStatus\": \"SYNCED\",\n    \"createdAt\": 1735689600000\n  },\n  {\n    \"id\": \"nota-2\",\n    \"subtopicId\": null,\n    \"moduleId\": null,\n    \"moduleLabel\": null,\n    \"subtopicCode\": null,\n    \"subtopicTitle\": null,\n    \"confirmedText\": \"Apunte fotografiado sin conexión, todavía sin clasificar por la auditoría de IA.\",\n    \"pageCount\": 1,\n    \"syncStatus\": \"QUEUED\",\n    \"createdAt\": 1735430400000\n  }\n]",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a3000000-0000-0000-0000-000000000032",
+          "label": "Servidor caido (para probar DomainError.Network / lista vacia)",
+          "statusCode": 500,
+          "latency": 0,
+          "bodyType": "INLINE",
+          "body": "{\n  \"message\": \"Error interno simulado\"\n}",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "studentId",
+              "value": "forzar-error",
+              "operator": "equals",
+              "invert": false
+            }
+          ],
+          "rulesOperator": "OR",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "a1000000-0000-0000-0000-000000000001"
+    },
+    {
+      "type": "route",
+      "uuid": "a2000000-0000-0000-0000-000000000002"
+    },
+    {
+      "type": "route",
+      "uuid": "a3000000-0000-0000-0000-000000000003"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

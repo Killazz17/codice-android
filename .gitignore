@@ -1,0 +1,30 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Carpetas de build de todos los modulos (:app, :core:*, :feature:*).
+# Sin la barra inicial, la regla aplica a cualquier nivel de profundidad.
+build/
+
+# Datos locales de plugins de Claude Code, no del proyecto
+.claude/
+
+# Carpeta que genera el compilador de Kotlin 2.x
+.kotlin/
+
+# No van en el repositorio (editor, planes internos y archivos generados)
+.idea/
+.artifacts/
+graphify-out/

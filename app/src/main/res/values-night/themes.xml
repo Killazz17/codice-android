@@ -1,0 +1,10 @@
+<resources>
+    <!--
+        Variante para modo oscuro del sistema.
+
+        Android elige automaticamente entre values/ y values-night/ segun la
+        configuracion del telefono. Igual que su version clara, esto solo
+        aplica a la pantalla de arranque.
+    -->
+    <style name="Theme.SierraAppMobile" parent="android:Theme.Material.NoActionBar" />
+</resources>

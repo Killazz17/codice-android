@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textos en español (idioma por defecto). Los generó la migración a recursos. -->
+    <string name="ds_loading">Cargando</string>
+    <string name="ds_retry">REINTENTAR</string>
+</resources>

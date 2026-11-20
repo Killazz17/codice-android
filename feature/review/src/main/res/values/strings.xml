@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textos en español (idioma por defecto). Los generó la migración a recursos. -->
+    <string name="rev_check">Comprobar</string>
+    <string name="rev_continue">Continuar</string>
+    <string name="rev_correct">Correcta</string>
+    <string name="rev_correct_2">Correcto</string>
+    <string name="rev_done">Listo</string>
+    <string name="rev_due">toca el %1$s</string>
+    <string name="rev_due_again_in">Vuelve a tocar en %1$s</string>
+    <string name="rev_finish">Terminar</string>
+    <string name="rev_generate_questions_from_the_gaps_in_yo">Genera preguntas a partir de los temas que te faltan por cubrir.</string>
+    <string name="rev_generate_reviews">Generar repasos</string>
+    <string name="rev_incorrect">Incorrecta</string>
+    <string name="rev_incorrect_2">Incorrecto</string>
+    <string name="rev_loading_reviews">Cargando repasos</string>
+    <string name="rev_passed">Aprobado</string>
+    <string name="rev_passed_to_repeat">Aprobados: %1$s · Para repetir: %2$s</string>
+    <string name="rev_practice_doesn_t_change_your_review_sc">Práctica: no cambia tu calendario de repasos.</string>
+    <string name="rev_practice_doesn_t_change_your_schedule_">Practicar no cambia tu calendario: cada repaso sigue tocando en su fecha.</string>
+    <string name="rev_practice_now">Practicar ahora</string>
+    <string name="rev_question_of">Pregunta %1$s de %2$s</string>
+    <string name="rev_questions_about_the_gaps_in_your_cover">Preguntas para reforzar los temas que te faltan</string>
+    <string name="rev_retry_saving">Reintentar guardado</string>
+    <string name="rev_review">Repaso</string>
+    <string name="rev_review_2">Intervalo: %1$s</string>
+    <string name="rev_review_of">Repaso %1$s de %2$s</string>
+    <string name="rev_still_due_on_its_date">Sigue tocando en su fecha</string>
+    <string name="rev_to_repeat">A repetir</string>
+    <string name="rev_upcoming_reviews">PRÓXIMOS REPASOS (%1$s)</string>
+    <string name="rev_why_we_asked">Por qué te lo preguntamos: %1$s</string>
+    <string name="rev_you_finished_the_practice">Terminaste la práctica</string>
+    <string name="rev_you_finished_today_s_reviews">Terminaste los repasos de hoy</string>
+    <string name="rev_you_have_no_reviews_for_today">No tienes repasos para hoy</string>
+    <string name="rev_your_scheduled_reviews_are_due_on_thei">Tus repasos programados tocan en su fecha. Si quieres, puedes practicarlos ahora.</string>
+    <string name="rev_one_day">1 día</string>
+    <string name="rev_n_days">%1$s días</string>
+    <string name="rev_quiz_hint">Responde y toca «Comprobar». Si aciertas, este tema vuelve más adelante; si fallas, vuelve mañana.</string>
+</resources>

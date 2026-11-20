@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- English texts. -->
+    <string name="rev_check">Check</string>
+    <string name="rev_continue">Continue</string>
+    <string name="rev_correct">Correct</string>
+    <string name="rev_correct_2">Correct</string>
+    <string name="rev_done">Done</string>
+    <string name="rev_due">due %1$s</string>
+    <string name="rev_due_again_in">Due again in %1$s</string>
+    <string name="rev_finish">Finish</string>
+    <string name="rev_generate_questions_from_the_gaps_in_yo">Generate questions from the topics you still need to cover.</string>
+    <string name="rev_generate_reviews">Generate reviews</string>
+    <string name="rev_incorrect">Incorrect</string>
+    <string name="rev_incorrect_2">Incorrect</string>
+    <string name="rev_loading_reviews">Loading reviews</string>
+    <string name="rev_passed">Passed</string>
+    <string name="rev_passed_to_repeat">Passed: %1$s · To repeat: %2$s</string>
+    <string name="rev_practice_doesn_t_change_your_review_sc">Practice: doesn\'t change your review schedule.</string>
+    <string name="rev_practice_doesn_t_change_your_schedule_">Practice doesn\'t change your schedule: each review is still due on its date.</string>
+    <string name="rev_practice_now">Practice now</string>
+    <string name="rev_question_of">Question %1$s of %2$s</string>
+    <string name="rev_questions_about_the_gaps_in_your_cover">Questions to reinforce the topics you\'re missing</string>
+    <string name="rev_retry_saving">Retry saving</string>
+    <string name="rev_review">Review</string>
+    <string name="rev_review_2">Interval: %1$s</string>
+    <string name="rev_review_of">Review %1$s of %2$s</string>
+    <string name="rev_still_due_on_its_date">Still due on its date</string>
+    <string name="rev_to_repeat">To repeat</string>
+    <string name="rev_upcoming_reviews">UPCOMING REVIEWS (%1$s)</string>
+    <string name="rev_why_we_asked">Why we asked: %1$s</string>
+    <string name="rev_you_finished_the_practice">You finished the practice</string>
+    <string name="rev_you_finished_today_s_reviews">You finished today\'s reviews</string>
+    <string name="rev_you_have_no_reviews_for_today">You have no reviews for today</string>
+    <string name="rev_your_scheduled_reviews_are_due_on_thei">Your scheduled reviews are due on their date. If you want, you can practice them now.</string>
+    <string name="rev_one_day">1 day</string>
+    <string name="rev_n_days">%1$s days</string>
+    <string name="rev_quiz_hint">Answer and tap “Check”. If you get it right, this topic comes back later; if you miss it, it comes back tomorrow.</string>
+</resources>
